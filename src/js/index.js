@@ -5,7 +5,8 @@ import {
     clearResults,
     renderProfile,
     getInputValue,
-    getSearchButton
+    getSearchButton,
+    getSearchInput
 } from './dom.js';
 
 const handleSearch = async () => {
@@ -34,3 +35,10 @@ const handleSearch = async () => {
 };
 
 getSearchButton().addEventListener('click', handleSearch);
+
+// Buscar al presionar Enter con método ES6
+getSearchInput().addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        handleSearch();
+    }
+});

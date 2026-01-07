@@ -75,3 +75,8 @@ export const getSearchButton = () => {
     const { btnSearch } = getElements();
     return btnSearch;
 };
+
+export const getSearchInput = () => {
+    const { inputSearch } = getElements();
+    return inputSearch;
+};
